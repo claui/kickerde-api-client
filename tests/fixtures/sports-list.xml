@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<sports xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <sport id="1" shortName="FB" longName="Fu&#xDF;ball" imId="1" livecenter="1" liveCount="178" liveCenterRessortId="77000" liveCenterRessortName="Live" urlFriendly="fussball_1" headlines="1" tippGame="1"/>
+    <sport id="2" shortName="HB" longName="Handball" imId="2" livecenter="1" liveCount="10" liveCenterRessortId="77000" liveCenterRessortName="Live" urlFriendly="handball_2" headlines="1" tippGame="1"/>
+    <sport id="3" shortName="EH" longName="Eishockey" imId="3" livecenter="1" liveCount="49" liveCenterRessortId="77000" liveCenterRessortName="Live" urlFriendly="eishockey_3" headlines="1" tippGame="1"/>
+    <sport id="4" shortName="BB" longName="Basketball" imId="4" livecenter="1" liveCount="14" liveCenterRessortId="77000" liveCenterRessortName="Live" urlFriendly="basketball_4" headlines="1" tippGame="1"/>
+    <sport id="5" shortName="MS" longName="Motorsport" imId="5" urlFriendly="motorsport_5" headlines="0"/>
+    <sport id="6" shortName="FTB" longName="Football" imId="6" livecenter="0" urlFriendly="football_6" headlines="1" tippGame="1"/>
+    <sport id="7" shortName="RS" longName="Radsport" imId="7" urlFriendly="radsport_7" headlines="0"/>
+    <sport id="8" shortName="TS" longName="Tennis" imId="8" livecenter="1" liveCenterRessortId="77000" liveCenterRessortName="Live" urlFriendly="tennis_8" headlines="1"/>
+    <sport id="15" shortName="WS" longName="Wintersport" imId="15" livecenterCalendar="1" liveCenterRessortId="77000" liveCenterRessortName="Live" urlFriendly="wintersport_15" headlines="1"/>
+    <sport id="32" shortName="ES" longName="eSport" imId="32" urlFriendly="esport_32" headlines="0"/>
+</sports>

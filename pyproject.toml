@@ -1,0 +1,82 @@
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+enable_incomplete_feature = "NewGenericSyntax"
+files = "kickerde_api_client/**/*.py,tests/**/*.py"
+implicit_reexport = false
+no_implicit_optional = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_ignores = true
+
+[tool.poetry]
+name = "kickerde_api_client"
+version = "0.1.0"
+description = "Unofficial Python bindings for the public kicker.de news API"
+readme = ["README.md"]
+authors = ["Claudia Pellegrino <clau@tiqua.de>"]
+license = "Apache-2.0"
+# See https://pypi.org/pypi?%3Aaction=list_classifiers
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Natural Language :: German",
+    "Topic :: Communications",
+    "Topic :: Home Automation",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+datetype = "*"
+requests = "^2.32.3"
+xmltodict = "^0.14.2"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "*"
+mypy = ">=1.8"
+poethepoet = ">=0.24"
+pylint = ">=3.0"
+pytest = "*"
+sphinx = ">=7.1.2,<7.2.0"
+sphinx-autoapi = ">=3.3"
+sphinx-rtd-theme = ">=3.0"
+types-requests = "*"
+types-xmltodict = "*"
+
+[tool.poe]
+verbosity = -1
+
+[tool.poe.tasks]
+tasks.cmd = "poe -v"
+tasks.help = "List available tasks"
+doc.cmd = "sphinx-build -aqEW -b html doc/sphinx build/html"
+doc.help = "Generate documentation"
+linter.cmd = "pylint --enable-all-extensions kickerde_api_client"
+linter.help = "Check for style violations"
+tests.cmd = "pytest"
+tests.help = "Run test suite"
+typecheck.cmd = "mypy"
+typecheck.help = "Run static type checker"
+
+[tool.pyright]
+reportUnsupportedDunderAll = "none"
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+xfail_strict = true
+
+[tool.ruff]
+line-length = 72
+
+[tool.ruff.format]
+quote-style = "single"

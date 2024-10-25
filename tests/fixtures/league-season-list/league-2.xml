@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<seasons xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <season id="2024/25" currentRoundId="10" displayKey="1463946397394926719" displayKey2="114688" table="2" winnerId="0"/>
+    <season id="2023/24" currentRoundId="34" displayKey="1463946397394926719" displayKey2="114688" table="2" winnerId="18" winnerLongName="FC St. Pauli" points="69" goals="62:36"/>
+    <season id="2022/23" currentRoundId="34" displayKey="1463946397394926719" displayKey2="114688" table="2" winnerId="11306" winnerLongName="1. FC Heidenheim" points="67" goals="67:36"/>
+    <season id="2021/22" currentRoundId="34" displayKey="1463946397357177983" displayKey2="114692" table="2" winnerId="2" winnerLongName="FC Schalke 04" points="65" goals="72:44"/>
+    <season id="2020/21" currentRoundId="34" displayKey="1463946397445258367" displayKey2="114688" table="2" winnerId="8" winnerLongName="VfL Bochum" points="67" goals="66:39"/>
+    <season id="2019/20" currentRoundId="34" displayKey="1463946397445258367" displayKey2="49152" table="2" winnerId="10" winnerLongName="Arminia Bielefeld" points="68" goals="65:30"/>
+    <season id="2018/19" currentRoundId="34" displayKey="1463946397445258367" displayKey2="49152" table="2" winnerId="16" winnerLongName="1. FC K&#xF6;ln" points="63" goals="84:47"/>
+    <season id="2017/18" currentRoundId="34" displayKey="22793417176120447" displayKey2="49152" table="2" winnerId="13" winnerLongName="Fortuna D&#xFC;sseldorf" points="63" goals="57:44"/>
+    <season id="2016/17" currentRoundId="34" displayKey="94851011113385087" displayKey2="4" table="2" winnerId="11" winnerLongName="VfB Stuttgart" points="69" goals="63:37"/>
+    <season id="2015/16" currentRoundId="34" displayKey="22793416991571071" displayKey2="4" table="2" winnerId="7" winnerLongName="SC Freiburg" points="72" goals="75:39"/>
+    <season id="2014/15" currentRoundId="34" displayKey="22793417209674879" displayKey2="4" table="2" winnerId="7659" winnerLongName="FC Ingolstadt 04" points="64" goals="53:32"/>
+    <season id="2013/14" currentRoundId="34" displayKey="4779018700188799" displayKey2="0" table="2" winnerId="16" winnerLongName="1. FC K&#xF6;ln" points="68" goals="53:20"/>
+    <season id="2012/13" currentRoundId="34" displayKey="4779018666634367" displayKey2="0" table="2" winnerId="29" winnerLongName="Hertha BSC" points="76" goals="65:28"/>
+    <season id="2011/12" currentRoundId="34" displayKey="4779018666634367" displayKey2="0" table="2" winnerId="82" winnerLongName="SpVgg Greuther F&#xFC;rth" points="70" goals="73:27"/>
+    <season id="2010/11" currentRoundId="34" displayKey="4779018666634367" displayKey2="0" table="2" winnerId="29" winnerLongName="Hertha BSC" points="74" goals="69:28"/>
+    <season id="2009/10" currentRoundId="34" displayKey="4779018666634367" displayKey2="0" table="2" winnerId="37" winnerLongName="1. FC Kaiserslautern" points="67" goals="56:28"/>
+    <season id="2008/09" currentRoundId="34" displayKey="4779018666634367" displayKey2="0" table="2" winnerId="7" winnerLongName="SC Freiburg" points="68" goals="60:36"/>
+    <season id="2007/08" currentRoundId="34" displayKey="4779018662440063" displayKey2="0" table="2" winnerId="15" winnerLongName="Bor. M&#xF6;nchengladbach" points="66" goals="71:38"/>
+    <season id="2006/07" currentRoundId="34" displayKey="4779001482570879" displayKey2="0" table="2" winnerId="6" winnerLongName="Karlsruher SC" points="70" goals="69:41"/>
+    <season id="2005/06" currentRoundId="34" displayKey="4779001482570879" displayKey2="0" table="2" winnerId="8" winnerLongName="VfL Bochum" points="66" goals="55:26"/>
+    <season id="2004/05" currentRoundId="34" displayKey="4779001482570879" displayKey2="0" table="2" winnerId="16" winnerLongName="1. FC K&#xF6;ln" points="67" goals="62:33"/>
+    <season id="2003/04" currentRoundId="34" displayKey="4779001482562687" displayKey2="0" table="2" winnerId="81" winnerLongName="1. FC N&#xFC;rnberg" points="61" goals="68:45"/>
+    <season id="2002/03" currentRoundId="34" displayKey="4779001482562687" displayKey2="0" table="2" winnerId="7" winnerLongName="SC Freiburg" points="67" goals="58:32"/>
+    <season id="2001/02" currentRoundId="34" displayKey="4779001482562687" displayKey2="0" table="2" winnerId="58" winnerLongName="Hannover 96" points="75" goals="93:37"/>
+    <season id="2000/01" currentRoundId="34" displayKey="4779001482562687" displayKey2="0" table="2" winnerId="81" winnerLongName="1. FC N&#xFC;rnberg" points="65" goals="58:35"/>
+    <season id="1999/00" currentRoundId="34" displayKey="4779001482562687" displayKey2="0" table="2" winnerId="16" winnerLongName="1. FC K&#xF6;ln" points="65" goals="68:39"/>
+    <season id="1998/99" currentRoundId="34" displayKey="4779001482562683" displayKey2="0" table="2" winnerId="10" winnerLongName="Arminia Bielefeld" points="67" goals="62:32"/>
+    <season id="1997/98" currentRoundId="34" displayKey="4779001482562683" displayKey2="0" table="2" winnerId="32" winnerLongName="Eintracht Frankfurt" points="64" goals="50:32"/>
+    <season id="1996/97" currentRoundId="34" displayKey="5341951435983963" displayKey2="0" table="2" winnerId="37" winnerLongName="1. FC Kaiserslautern" points="68" goals="74:28"/>
+    <season id="1995/96" currentRoundId="34" displayKey="5341951435983963" displayKey2="0" table="2" winnerId="8" winnerLongName="VfL Bochum" points="69" goals="68:30"/>
+    <season id="1994/95" currentRoundId="34" displayKey="5341951435984475" displayKey2="0" table="2" winnerId="3" winnerLongName="Hansa Rostock" points="46:22" goals="66:30"/>
+    <season id="1993/94" currentRoundId="38" displayKey="5341951435984475" displayKey2="0" table="2" winnerId="8" winnerLongName="VfL Bochum" points="48:28" goals="56:34"/>
+    <season id="1992/93" currentRoundId="46" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="7" winnerLongName="SC Freiburg" points="65:27" goals="102:57"/>
+    <season id="1991/92" currentRoundId="32" displayKey="4779001482560019" displayKey2="0" table="2" winnerId="0" winnerLongName="Uerdingen/Saarbr&#xFC;cken"/>
+    <season id="1990/91" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="2" winnerLongName="FC Schalke 04" points="57:19" goals="64:29"/>
+    <season id="1989/90" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="29" winnerLongName="Hertha BSC" points="53:23" goals="65:39"/>
+    <season id="1988/89" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="13" winnerLongName="Fortuna D&#xFC;sseldorf" points="49:27" goals="85:52"/>
+    <season id="1987/88" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="26" winnerLongName="Stuttgarter Kickers" points="51:25" goals="89:49"/>
+    <season id="1986/87" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="58" winnerLongName="Hannover 96" points="56:20" goals="86:48"/>
+    <season id="1985/86" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="107" winnerLongName="FC 08 Homburg" points="49:27" goals="75:42"/>
+    <season id="1984/85" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="81" winnerLongName="1. FC N&#xFC;rnberg" points="50:26" goals="71:45"/>
+    <season id="1983/84" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="6" winnerLongName="Karlsruher SC" points="57:19" goals="94:45"/>
+    <season id="1982/83" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="22" winnerLongName="SV Waldhof Mannheim" points="52:24" goals="83:38"/>
+    <season id="1981/82" currentRoundId="38" displayKey="4779001482563091" displayKey2="0" table="2" winnerId="2" winnerLongName="FC Schalke 04" points="51:25" goals="70:35"/>
+    <season id="1980/81" currentRoundId="42" displayKey="4779001482560019" displayKey2="0" table="2" winnerId="0" winnerLongName="Bremen/Darmstadt"/>
+    <season id="1979/80" currentRoundId="42" displayKey="4779001482560019" displayKey2="0" table="2" winnerId="0" winnerLongName="N&#xFC;rnberg/Bielefeld"/>
+    <season id="1978/79" currentRoundId="38" displayKey="4779001482560019" displayKey2="0" table="2" winnerId="0" winnerLongName="1860 M&#xFC;nchen/Leverkusen"/>
+    <season id="1977/78" currentRoundId="38" displayKey="4779001482560019" displayKey2="0" table="2" winnerId="0" winnerLongName="Bielefeld/Darmstadt"/>
+    <season id="1976/77" currentRoundId="38" displayKey="4779001482560019" displayKey2="0" table="2" winnerId="0" winnerLongName="Stuttgart/St. Pauli"/>
+    <season id="1975/76" currentRoundId="38" displayKey="4779001482560019" displayKey2="0" table="2" winnerId="0" winnerLongName="TeBe Berlin/Saarbr&#xFC;cken"/>
+    <season id="1974/75" currentRoundId="38" displayKey="4779001482560019" displayKey2="0" table="2" winnerId="0" winnerLongName="Karlsruhe/Hannover"/>
+    <banner qmKeywords="Wettbewerb=2-bundesliga_2" qmPhoneL="MRec_1" qmPhoneP="MRec_1" qmTabletL="Leaderboard_1" qmTabletP="Leaderboard_1"/>
+    <taboola pageUrl="http://www.kicker.de/2-bundesliga/teams/2024-25" androidPhone="MB_25" iosPhone="MB_26" androidTablet="MB_27" iosTablet="MB_28" installationKeyIos="DEKIC2753FD8MB9N4PIJMG215" installationKeyAndroid="DEKIC7J0N51JC4G3H3GKF1FPI" v3AccountAndroid="1490531" v3AccountIos="1490532" v3PlacementAndroid="Android-12Karten-RevenueShare" v3PlacementIos="iOS-12Karten-RevenueShare" v3Pagetype="other" v3Mode="thumbnails-1;thumbnails-2;thumbnails-3" v3ModeTablet="thumbs-1-tab;thumbs-2-tab;thumbs-3-tab" v4PlacementAndroid="Android-12Karten-RevenueShare - Feed" v4Mode="thumbs-1" v4ModeTablet="thumbs-1-tab"/>
+</seasons>

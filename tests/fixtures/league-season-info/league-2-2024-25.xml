@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<league xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="2" shortName="2.BL" longName="2. Bundesliga" teamType="verein" iconSmall="https://derivates.kicker.de/image/fetch/w_60,h_60,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2018%2ffussball%2fligen%2fxxl%2f2_20170629806.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2018%2ffussball%2fligen%2fxxl%2f2_20170629806.png" currentSeasonId="2024/25" currentRoundId="10" displayKey="1463946397394926719" displayKey2="114688" table="2" ressortId="4000" ressortIdHome="4000" tblcalc="1" socialmedia="1" syncMeinKicker="0" goalgetters="1">
+    <country id="D" shortName="DE" longName="Deutschland" isoName="DEU" iconSmall="https://derivates.kicker.de/image/fetch/w_64,h_64,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2fdefault%2fnationen%2fxxl%2f49.png"/>
+    <teams>
+        <team id="13" defaultLeagueId="2" shortName="D&#xFC;sseldorf" longName="Fortuna D&#xFC;sseldorf" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2009%2ffussball%2fvereine%2fxxl%2f13.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2009%2ffussball%2fvereine%2fxxl%2f13.png" countryId="D">
+            <stadium id="678" name="Merkur Spiel-Arena" city="D&#xFC;sseldorf"/>
+        </team>
+        <team id="6" defaultLeagueId="2" shortName="Karlsruhe" longName="Karlsruher SC" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2016%2ffussball%2fvereine%2fxxl%2f6_20150721308.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2016%2ffussball%2fvereine%2fxxl%2f6_20150721308.png" countryId="D">
+            <stadium id="7" name="BBBank Wildpark" city="Karlsruhe"/>
+        </team>
+        <team id="12" defaultLeagueId="2" shortName="HSV" longName="Hamburger SV" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2012%2ffussball%2fvereine%2fxxl%2f12_20200615597.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2012%2ffussball%2fvereine%2fxxl%2f12_20200615597.png" countryId="D">
+            <stadium id="5" name="Volksparkstadion" city="Hamburg"/>
+        </team>
+        <team id="128" defaultLeagueId="2" shortName="Magdeburg" longName="1. FC Magdeburg" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2024%2ffussball%2fvereine%2fxxl%2f128_20240201949.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2024%2ffussball%2fvereine%2fxxl%2f128_20240201949.png" countryId="D">
+            <stadium id="1113" name="Avnet Arena" city="Magdeburg"/>
+        </team>
+        <team id="109" defaultLeagueId="2" shortName="Paderborn" longName="SC Paderborn 07" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2018%2ffussball%2fvereine%2fxxl%2f109_20180329773.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2018%2ffussball%2fvereine%2fxxl%2f109_20180329773.png" countryId="D">
+            <stadium id="759" name="Home-Deluxe-Arena" city="Paderborn"/>
+        </team>
+        <team id="58" defaultLeagueId="2" shortName="Hannover" longName="Hannover 96" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2009%2ffussball%2fvereine%2fxxl%2f58_20150226091.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2009%2ffussball%2fvereine%2fxxl%2f58_20150226091.png" countryId="D">
+            <stadium id="51" name="Heinz von Heiden Arena" city="Hannover"/>
+        </team>
+        <team id="29" defaultLeagueId="2" shortName="Hertha" longName="Hertha BSC" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2024%2ffussball%2fvereine%2fxxl%2f29_20240220737.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2024%2ffussball%2fvereine%2fxxl%2f29_20240220737.png" countryId="D">
+            <stadium id="32" name="Olympiastadion" city="Berlin"/>
+        </team>
+        <team id="118" defaultLeagueId="2" shortName="Elversberg" longName="SV Elversberg" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2022%2ffussball%2fvereine%2fxxl%2f118_20220627349.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2022%2ffussball%2fvereine%2fxxl%2f118_20220627349.png" countryId="D">
+            <stadium id="116" name="Ursapharm-Arena an der Kaiserlinde" city="Elversberg"/>
+        </team>
+        <team id="81" defaultLeagueId="2" shortName="N&#xFC;rnberg" longName="1. FC N&#xFC;rnberg" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2013%2ffussball%2fvereine%2fxxl%2f81_20150310408.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2013%2ffussball%2fvereine%2fxxl%2f81_20150310408.png" countryId="D">
+            <stadium id="39" name="Max-Morlock-Stadion" city="N&#xFC;rnberg"/>
+        </team>
+        <team id="16" defaultLeagueId="2" shortName="K&#xF6;ln" longName="1. FC K&#xF6;ln" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2009%2ffussball%2fvereine%2fxxl%2f16_20211110549.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2009%2ffussball%2fvereine%2fxxl%2f16_20211110549.png" countryId="D">
+            <stadium id="11" name="Rhein-Energie-Stadion" city="K&#xF6;ln"/>
+        </team>
+        <team id="37" defaultLeagueId="2" shortName="K'lautern" longName="1. FC Kaiserslautern" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2017%2ffussball%2fvereine%2fxxl%2f37_20161215433.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2017%2ffussball%2fvereine%2fxxl%2f37_20161215433.png" countryId="D">
+            <stadium id="19" name="Fritz-Walter-Stadion" city="Kaiserslautern"/>
+        </team>
+        <team id="82" defaultLeagueId="2" shortName="F&#xFC;rth" longName="SpVgg Greuther F&#xFC;rth" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2025%2ffussball%2fvereine%2fxxl%2f82_20240808868.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2025%2ffussball%2fvereine%2fxxl%2f82_20240808868.png" countryId="D">
+            <stadium id="40" name="Sportpark Ronhof I Thomas Sommer" city="F&#xFC;rth"/>
+        </team>
+        <team id="98" defaultLeagueId="2" shortName="Darmstadt" longName="SV Darmstadt 98" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2016%2ffussball%2fvereine%2fxxl%2f98_20150723389.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2016%2ffussball%2fvereine%2fxxl%2f98_20150723389.png" countryId="D">
+            <stadium id="100" name="Merck-Stadion am B&#xF6;llenfalltor" city="Darmstadt"/>
+        </team>
+        <team id="2" defaultLeagueId="2" shortName="Schalke" longName="FC Schalke 04" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2009%2ffussball%2fvereine%2fxxl%2f2.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2009%2ffussball%2fvereine%2fxxl%2f2.png" countryId="D">
+            <stadium id="279" name="Veltins-Arena" city="Gelsenkirchen"/>
+        </team>
+        <team id="84" defaultLeagueId="2" shortName="Ulm" longName="SSV Ulm 1846 Fu&#xDF;ball" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2013%2ffussball%2fvereine%2fxxl%2f84_20150401924.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2013%2ffussball%2fvereine%2fxxl%2f84_20150401924.png" countryId="D">
+            <stadium id="53" name="Donaustadion" city="Ulm"/>
+        </team>
+        <team id="41" defaultLeagueId="2" shortName="Braunschweig" longName="Eintracht Braunschweig" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2018%2ffussball%2fvereine%2fxxl%2f41_20190430543.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2018%2ffussball%2fvereine%2fxxl%2f41_20190430543.png" countryId="D">
+            <stadium id="82" name="Eintracht-Stadion" city="Braunschweig"/>
+        </team>
+        <team id="104" defaultLeagueId="2" shortName="M&#xFC;nster" longName="Preu&#xDF;en M&#xFC;nster" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2020%2ffussball%2fvereine%2fxxl%2f104_20200531865.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2020%2ffussball%2fvereine%2fxxl%2f104_20200531865.png" countryId="D">
+            <stadium id="120" name="Preu&#xDF;enstadion" city="M&#xFC;nster"/>
+        </team>
+        <team id="1377" defaultLeagueId="2" shortName="Regensburg" longName="Jahn Regensburg" iconSmall="https://derivates.kicker.de/image/fetch/w_20,h_20,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2021%2ffussball%2fvereine%2fxxl%2f1377_20220704177.png" iconBig="https://derivates.kicker.de/image/fetch/w_130,h_130,c_fit,q_auto/https%3a%2f%2fsecure-mediadb.kicker.de%2f2021%2ffussball%2fvereine%2fxxl%2f1377_20220704177.png" countryId="D">
+            <stadium id="1978" name="Jahnstadion Regensburg" city="Regensburg"/>
+        </team>
+        <banner qmKeywords="Wettbewerb=2-bundesliga_2" qmPhoneL="MRec_1" qmPhoneP="MRec_1" qmTabletL="Leaderboard_1" qmTabletP="Leaderboard_1" bannerName="fix_pos_teams"/>
+    </teams>
+    <gamedays>
+        <gameday id="1" title="1. Spieltag" dateFrom="2024-08-02T20:30:00" dateTo="2024-08-04T13:30:00"/>
+        <gameday id="2" title="2. Spieltag" dateFrom="2024-08-09T18:30:00" dateTo="2024-08-11T13:30:00"/>
+        <gameday id="3" title="3. Spieltag" dateFrom="2024-08-23T18:30:00" dateTo="2024-08-25T13:30:00"/>
+        <gameday id="4" title="4. Spieltag" dateFrom="2024-08-30T18:30:00" dateTo="2024-09-01T13:30:00"/>
+        <gameday id="5" title="5. Spieltag" dateFrom="2024-09-13T18:30:00" dateTo="2024-09-15T13:30:00"/>
+        <gameday id="6" title="6. Spieltag" dateFrom="2024-09-20T18:30:00" dateTo="2024-09-22T13:30:00"/>
+        <gameday id="7" title="7. Spieltag" dateFrom="2024-09-27T18:30:00" dateTo="2024-09-29T13:40:00"/>
+        <gameday id="8" title="8. Spieltag" dateFrom="2024-10-04T18:30:00" dateTo="2024-10-06T13:30:00"/>
+        <gameday id="9" title="9. Spieltag" dateFrom="2024-10-18T18:30:00" dateTo="2024-10-20T13:30:00"/>
+        <gameday id="10" title="10. Spieltag" dateFrom="2024-10-25T18:30:00" dateTo="2024-10-27T13:30:00"/>
+        <gameday id="11" title="11. Spieltag" dateFrom="2024-11-01T18:30:00" dateTo="2024-11-03T13:30:00"/>
+        <gameday id="12" title="12. Spieltag" dateFrom="2024-11-08T18:30:00" dateTo="2024-11-10T13:30:00"/>
+        <gameday id="13" title="13. Spieltag" dateFrom="2024-11-22T18:30:00" dateTo="2024-11-24T13:30:00"/>
+        <gameday id="14" title="14. Spieltag" dateFrom="2024-11-29T18:30:00" dateTo="2024-12-01T13:30:00"/>
+        <gameday id="15" title="15. Spieltag" dateFrom="2024-12-08T00:00:00" dateTo="2024-12-08T00:00:00"/>
+        <gameday id="16" title="16. Spieltag" dateFrom="2024-12-15T00:00:00" dateTo="2024-12-15T00:00:00"/>
+        <gameday id="17" title="17. Spieltag" dateFrom="2024-12-22T00:00:00" dateTo="2024-12-22T00:00:00"/>
+        <gameday id="18" title="18. Spieltag" dateFrom="2025-01-19T00:00:00" dateTo="2025-01-19T00:00:00"/>
+        <gameday id="19" title="19. Spieltag" dateFrom="2025-01-26T00:00:00" dateTo="2025-01-26T00:00:00"/>
+        <gameday id="20" title="20. Spieltag" dateFrom="2025-02-02T00:00:00" dateTo="2025-02-02T00:00:00"/>
+        <gameday id="21" title="21. Spieltag" dateFrom="2025-02-09T00:00:00" dateTo="2025-02-09T00:00:00"/>
+        <gameday id="22" title="22. Spieltag" dateFrom="2025-02-16T00:00:00" dateTo="2025-02-16T00:00:00"/>
+        <gameday id="23" title="23. Spieltag" dateFrom="2025-02-23T00:00:00" dateTo="2025-02-23T00:00:00"/>
+        <gameday id="24" title="24. Spieltag" dateFrom="2025-03-02T00:00:00" dateTo="2025-03-02T00:00:00"/>
+        <gameday id="25" title="25. Spieltag" dateFrom="2025-03-09T00:00:00" dateTo="2025-03-09T00:00:00"/>
+        <gameday id="26" title="26. Spieltag" dateFrom="2025-03-16T00:00:00" dateTo="2025-03-16T00:00:00"/>
+        <gameday id="27" title="27. Spieltag" dateFrom="2025-03-30T00:00:00" dateTo="2025-03-30T00:00:00"/>
+        <gameday id="28" title="28. Spieltag" dateFrom="2025-04-06T00:00:00" dateTo="2025-04-06T00:00:00"/>
+        <gameday id="29" title="29. Spieltag" dateFrom="2025-04-13T00:00:00" dateTo="2025-04-13T00:00:00"/>
+        <gameday id="30" title="30. Spieltag" dateFrom="2025-04-20T00:00:00" dateTo="2025-04-20T00:00:00"/>
+        <gameday id="31" title="31. Spieltag" dateFrom="2025-04-27T00:00:00" dateTo="2025-04-27T00:00:00"/>
+        <gameday id="32" title="32. Spieltag" dateFrom="2025-05-04T00:00:00" dateTo="2025-05-04T00:00:00"/>
+        <gameday id="33" title="33. Spieltag" dateFrom="2025-05-11T00:00:00" dateTo="2025-05-11T00:00:00"/>
+        <gameday id="34" title="34. Spieltag" dateFrom="2025-05-18T15:30:00" dateTo="2025-05-18T15:30:00"/>
+    </gamedays>
+    <taboola pageUrl="http://www.kicker.de/2-bundesliga/teams/2024" androidPhone="MB_25" iosPhone="MB_26" androidTablet="MB_27" iosTablet="MB_28" installationKeyIos="DEKIC2753FD8MB9N4PIJMG215" installationKeyAndroid="DEKIC7J0N51JC4G3H3GKF1FPI" v3AccountAndroid="1490531" v3AccountIos="1490532" v3PlacementAndroid="Android-12Karten-RevenueShare" v3PlacementIos="iOS-12Karten-RevenueShare" v3Pagetype="other" v3Mode="thumbnails-1;thumbnails-2;thumbnails-3" v3ModeTablet="thumbs-1-tab;thumbs-2-tab;thumbs-3-tab" v4PlacementAndroid="Android-12Karten-RevenueShare - Feed" v4Mode="thumbs-1" v4ModeTablet="thumbs-1-tab"/>
+</league>
