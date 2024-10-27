@@ -191,3 +191,11 @@ To check dependencies for compatible updates, run:
 ```shell
 poetry update --dry-run
 ```
+
+### Updating requirements file for Read the Docs
+
+To update the `doc/requirements.txt` file for Read the Docs, run:
+
+```shell
+poetry export --only doc --output doc/requirements.txt
+```

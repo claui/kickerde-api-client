@@ -47,11 +47,13 @@ mypy = ">=1.8"
 poethepoet = ">=0.24"
 pylint = ">=3.0"
 pytest = "*"
+types-requests = "*"
+types-xmltodict = "*"
+
+[tool.poetry.group.doc.dependencies]
 sphinx = ">=7.1.2,<7.2.0"
 sphinx-autoapi = ">=3.3"
 sphinx-rtd-theme = ">=3.0"
-types-requests = "*"
-types-xmltodict = "*"
 
 [tool.poe]
 verbosity = -1
