@@ -34,6 +34,8 @@ classifiers = [
     "Topic :: Communications",
     "Topic :: Home Automation",
 ]
+documentation = "https://kickerde-api-client.readthedocs.io/"
+repository = "https://github.com/claui/kickerde-api-client"
 
 [tool.poetry.dependencies]
 python = ">=3.12"

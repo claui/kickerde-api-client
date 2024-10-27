@@ -25,6 +25,10 @@ Direct your favorite
 [AUR helper](https://wiki.archlinux.org/title/AUR_helpers) to the
 `python-kickerde-api-client` package.
 
+## Usage
+
+Browse the [documentation on Read the Docs](https://kickerde-api-client.readthedocs.io/) for details.
+
 ## Contributing to this library
 
 See [`CONTRIBUTING.md`](https://github.com/claui/kickerde-api-client/blob/main/CONTRIBUTING.md).
