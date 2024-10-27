@@ -10,4 +10,4 @@ build:
     python: "3.12"
 
 sphinx:
-  configuration: docs/sphinx/conf.py
+  configuration: doc/sphinx/conf.py
