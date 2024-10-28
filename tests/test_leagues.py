@@ -19,8 +19,8 @@ def fixture_api(canned_response_provider: ResponseProvider) -> Api:
     return Api(provider=canned_response_provider)
 
 
-def test_2_bundesliga(api: Api) -> None:
-    leagues = api.leagues()
+async def test_2_bundesliga(api: Api) -> None:
+    leagues = await api.leagues()
     assert 2 in leagues
     assert leagues[LeagueId(2)] == League(
         {
@@ -50,8 +50,8 @@ def test_2_bundesliga(api: Api) -> None:
     )
 
 
-def test_friendlies(api: Api) -> None:
-    leagues = api.leagues()
+async def test_friendlies(api: Api) -> None:
+    leagues = await api.leagues()
     assert 999 in leagues
     assert leagues[LeagueId(999)] == League(
         {

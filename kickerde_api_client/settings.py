@@ -10,6 +10,5 @@ PYPROJECT_TOML = PROJECT_ROOT / 'pyproject.toml'
 DEFAULT_ENDPOINT_URL = (
     'https://ovsyndication.kicker.de/API/universal/3.0'
 )
-REQUEST_TIMEOUT_SEC = 30
 
 debugMode = bool(os.getenv('KICKERDE_API_CLIENT_DEBUG'))

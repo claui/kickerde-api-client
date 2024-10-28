@@ -13,8 +13,8 @@ def fixture_api(canned_response_provider: ResponseProvider) -> Api:
     return Api(provider=canned_response_provider)
 
 
-def test_league_season_2_bundesliga(api: Api) -> None:
-    league_season = api.league_season(
+async def test_league_season_2_bundesliga(api: Api) -> None:
+    league_season = await api.league_season(
         league=LeagueId(2), season='2024/25'
     )
     assert league_season['id'] == LeagueId.BUNDESLIGA_2
@@ -39,8 +39,8 @@ def test_league_season_2_bundesliga(api: Api) -> None:
     )
 
 
-def test_league_season_landespokal_hessen(api: Api) -> None:
-    league_season = api.league_season(
+async def test_league_season_landespokal_hessen(api: Api) -> None:
+    league_season = await api.league_season(
         league=LeagueId(6081), season='2024/25'
     )
     assert league_season['id'] == LeagueId.LPHS

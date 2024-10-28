@@ -13,8 +13,8 @@ def fixture_api(canned_response_provider: ResponseProvider) -> Api:
     return Api(provider=canned_response_provider)
 
 
-def test_lecce(api: Api) -> None:
-    team = api.my_team_sync(team=713)
+async def test_lecce(api: Api) -> None:
+    team = await api.my_team_sync(team=713)
     assert team['id'] == 713
     assert team['countryId'] == 'I'
     assert team['changeMeinKicker'] is False
@@ -97,8 +97,8 @@ def test_lecce(api: Api) -> None:
     assert league['priority'] == 1
 
 
-def test_barca(api: Api) -> None:
-    team = api.my_team_sync(team=912)
+async def test_barca(api: Api) -> None:
+    team = await api.my_team_sync(team=912)
     assert team['id'] == 912
     assert team['countryId'] == 'E'
     assert 4922675 in team['matches']

@@ -5,6 +5,7 @@ import sys
 from typing import Any
 
 import datetype
+import httpx
 
 from .mapping.league_list import league_list_home_to_dict
 from .mapping.league_season_info import league_season_info_to_dict
@@ -29,13 +30,18 @@ logger = get_logger(__name__)
 class Api:
     """The primary API client and entry point for all requests."""
 
+    _provider: ResponseProvider
+
     def __init__(
         self,
+        http_client: httpx.AsyncClient | None = None,
         provider: ResponseProvider | None = None,
     ) -> None:
-        self._provider = provider or DefaultResponseProvider()
+        self._provider = provider or DefaultResponseProvider(
+            http_client=http_client
+        )
 
-    def leagues(self) -> dict[LeagueId, League]:
+    async def leagues(self) -> dict[LeagueId, League]:
         """Returns all leagues and tournaments known to the system.
 
         :return:
@@ -43,10 +49,10 @@ class Api:
             by league ID.
         """
         return league_list_home_to_dict(
-            self._provider.get('LeagueListHome/3'),
+            await self._provider.get('LeagueListHome/3'),
         )
 
-    def seasons(
+    async def seasons(
         self, league: League | LeagueId
     ) -> dict[SeasonId, Season]:
         """Returns all known seasons for the given league or tournament.
@@ -61,10 +67,12 @@ class Api:
         """
         league_id = league['id'] if isinstance(league, dict) else league
         return league_season_list_to_dict(
-            self._provider.get(f'LeagueSeasonList/3/ligid/{league_id}'),
+            await self._provider.get(
+                f'LeagueSeasonList/3/ligid/{league_id}'
+            ),
         )
 
-    def league_season(
+    async def league_season(
         self,
         league: League | LeagueId,
         season: Season | SeasonId,
@@ -87,12 +95,12 @@ class Api:
         league_id = league['id'] if isinstance(league, dict) else league
         season_id = season['id'] if isinstance(season, dict) else season
         return league_season_info_to_dict(
-            self._provider.get(
+            await self._provider.get(
                 f'LeagueSeasonInfo/3/ligid/{league_id}/saison/{season_id}'
             ),
         )
 
-    def my_team_sync(self, team: Team | TeamId) -> MyTeamSync:
+    async def my_team_sync(self, team: Team | TeamId) -> MyTeamSync:
         """Returns an informational structure for live and upcoming
         matches played by the given team.
 
@@ -104,16 +112,19 @@ class Api:
         """
         team_id = team['id'] if isinstance(team, dict) else team
         return my_team_sync_to_dict(
-            self._provider.get(f'MyTeamSync/3/vrnid/{team_id}')
+            await self._provider.get(f'MyTeamSync/3/vrnid/{team_id}')
         )
 
-    def dump_leagues(self) -> None:
+    async def dump_leagues(self) -> None:
         """Dumps all leagues to stdout in JSON format."""
         json.dump(
-            self.leagues(), sys.stdout, ensure_ascii=False, indent=4
+            await self.leagues(),
+            sys.stdout,
+            ensure_ascii=False,
+            indent=4,
         )
 
-    def dump_seasons(self, league: League | LeagueId) -> None:
+    async def dump_seasons(self, league: League | LeagueId) -> None:
         """Dumps all seasons to stdout in JSON format.
 
         :param league:
@@ -121,13 +132,13 @@ class Api:
             Alternatively, a :py:class:`~.model.League` object.
         """
         json.dump(
-            self.seasons(league=league),
+            await self.seasons(league=league),
             sys.stdout,
             ensure_ascii=False,
             indent=4,
         )
 
-    def dump_league_season(
+    async def dump_league_season(
         self,
         league: League | LeagueId,
         season: Season | SeasonId,
@@ -144,14 +155,14 @@ class Api:
             Alternatively, a :py:class:`~.model.Season` object.
         """
         json.dump(
-            self.league_season(league=league, season=season),
+            await self.league_season(league=league, season=season),
             sys.stdout,
             default=_serialize_with_datetime_support,
             ensure_ascii=False,
             indent=4,
         )
 
-    def dump_my_team_sync(self, team: Team | TeamId) -> None:
+    async def dump_my_team_sync(self, team: Team | TeamId) -> None:
         """Dumps a :py:class:`~.model.MyTeamSync` object to stdout in
         JSON format.
 
@@ -160,7 +171,7 @@ class Api:
             Alternatively, a :py:class:`~.model.Team` object.
         """
         json.dump(
-            self.my_team_sync(team=team),
+            await self.my_team_sync(team=team),
             sys.stdout,
             default=_serialize_with_datetime_support,
             ensure_ascii=False,

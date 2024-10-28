@@ -34,13 +34,13 @@ classifiers = [
     "Topic :: Communications",
     "Topic :: Home Automation",
 ]
-documentation = "https://kickerde-api-client.readthedocs.io/"
+documentation = "https://kickerde-api-client.readthedocs.io/en/stable/autoapi/kickerde_api_client/"
 repository = "https://github.com/claui/kickerde-api-client"
 
 [tool.poetry.dependencies]
 python = ">=3.12"
 datetype = "*"
-requests = "^2.32.3"
+httpx = "^0.27.2"
 xmltodict = "^0.14.2"
 
 [tool.poetry.group.dev.dependencies]
@@ -49,7 +49,7 @@ mypy = ">=1.8"
 poethepoet = ">=0.24"
 pylint = ">=3.0"
 pytest = "*"
-types-requests = "*"
+pytest-asyncio = "*"
 types-xmltodict = "*"
 
 [tool.poetry.group.doc.dependencies]
@@ -76,6 +76,8 @@ typecheck.help = "Run static type checker"
 reportUnsupportedDunderAll = "none"
 
 [tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "package"
+asyncio_mode = "auto"
 testpaths = "tests"
 xfail_strict = true
 

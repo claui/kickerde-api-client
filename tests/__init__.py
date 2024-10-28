@@ -1,1 +1,5 @@
-# We need this so the tests are able to find the module under test.
+# pylint: disable=missing-module-docstring
+
+import pytest
+
+pytestmark = pytest.mark.asyncio(loop_scope='package')
