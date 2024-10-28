@@ -12,8 +12,8 @@ from .league import map_league_properties
 def league_list_home_to_dict(
     xml: str,
 ) -> dict[LeagueId, League]:
-    """Transforms an API response to a dictionary of `League`
-    objects, indexec by league ID.
+    """Transforms an API response to a dictionary of
+    :py:class:`~.model.League` objects, indexed by league ID.
 
     :param xml:
         a response to a `LeagueListHome/3` query.

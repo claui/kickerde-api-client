@@ -186,7 +186,8 @@ class Match(TypedDict):
 
 class LeagueSeason(TypedDict):
     """Upstream model for a hierarchical view on a league in a season.
-    Contains teams and match days (dubbed `gamedays`) as submappings.
+    Contains teams and match days (dubbed  :py:attr:`.gamedays`) as
+    submappings.
 
     Submappings are indexed by team ID or gameday ID, respectively.
     """
@@ -218,16 +219,19 @@ type MediaObject = Any
 
 
 class LeagueTableEntry(TypedDict):
-    """Upstream model for an entry in a league table.
-
-    Note that the values of the `rank` property in a set of league
-    table entries may be non-unique (due to ties) and sparse (also
-    due to ties, or because the league table might represent a
-    focused subwindow of an actual league table).
-    """
+    """Upstream model for an entry in a league table."""
 
     id: TeamId
+
     rank: int
+    """The numeric rank of the table entry.
+
+    Note that in the context of the league table that contains this
+    entry, the values of `rank` may be non-unique (due to ties) and
+    sparse (also due to ties, or because the league table might
+    represent a focused subwindow of an actual league table).
+    """
+
     shortName: str
     longName: str
     sortName: str
@@ -255,30 +259,27 @@ class LeagueTableEntry(TypedDict):
 
 
 class LeagueTable(TypedDict):
-    """Upstream model for a league table.
-    Its entries are organized in a submapping, which contains
-    `LeagueTableEntry` objects and is indexed by team ID.
-
-    Note that the values of the `rank` property in the entries of
-    this table may be non-unique (due to ties) and sparse (also
-    due to ties, or because this league table might represent a
-    focused subwindow of an actual league table).
-    """
+    """Upstream model for a league table."""
 
     id: LeagueTableId
     leagueId: LeagueId
     name: str
     seasonId: SeasonId
     roundId: int
+
     entries: dict[TeamId, LeagueTableEntry]
+    """Dictionary containing :py:class:`.LeagueTableEntry` objects,
+    ordered by :py:attr:`~.LeagueTableEntry.rank` but indexed by
+    team ID.
+
+    See :py:attr:`.LeagueTableEntry.rank` for details on why this
+    dictionary is indexed by team rather than by rank.
+    """
 
 
 class MyTeamSync(TypedDict):
-    """Upstream model for live and upcoming matches played by a
+    """Upstream model for live or upcoming matches played by a
     given team.
-
-    The `matches` property is a subdictionary of matches, indexed
-    by match ID.
     """
 
     id: TeamId
@@ -286,7 +287,10 @@ class MyTeamSync(TypedDict):
     defaultLeagueId: LeagueId
     shortName: str
     longName: str
+
     matches: Mapping[MatchId, Match]
+    """Matches played by this team, indexed by match ID."""
+
     objects: Mapping[
         Literal['documents', 'slideshows ', 'videos'],
         Mapping[ObjectId, MediaObject],

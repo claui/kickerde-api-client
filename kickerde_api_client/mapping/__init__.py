@@ -10,13 +10,13 @@ type Submapper = Callable[[str, Any], tuple[str, Any] | None]
 while mapping an object hierarchy from a source to a target format.
 
 A `Submapper` is conceptually similar to, but not the same thing as,
-a callback function used in the `postprocessor` kwarg of xmltodict’s
-`parse` method. A submapper is less flexible than a `postprocessor`
-kwarg because the latter accepts a complex path that points to
-an element location in the object hierarchy. On the other hand, a
-submapper assumes a fixed (implied) location, so it only accepts
-`key` and `value` as arguments but not the element’s location in
-the hierarchy.
+a callback function used in the `postprocessor` kwarg of the
+:py:meth:`xmltodict.parse` function. A submapper is less flexible than
+a `postprocessor` kwarg because the latter accepts a complex path
+that points to an element location in the object hierarchy. On the
+other hand, a submapper assumes a fixed (implied) location, so it
+only accepts `key` and `value` as arguments but not the element’s
+location in the hierarchy.
 
 (The name `Submapper` was chosen to emphasize that any given
 function of this type is usually focused on mapping a specific
@@ -30,8 +30,8 @@ the element, i.e. not include it in the target hierarchy.
 
 type SubmapperKey = str | tuple[str, ...]
 """Immutable key that describes a location in an object hierarchy.
-Used internally to look up functions of the `Submapper` type by
-location.
+Used internally to look up functions of the :py:obj:`.Submapper`
+type by location.
 
 If the key is a **string**, then the key matches a location if and
 only if the element name is equal to the key.
@@ -48,14 +48,16 @@ at `foo.bar.baz`. It does not match any other elements.
 
 
 class XmlMappingHelper:  # pylint: disable=too-few-public-methods
-    """Mapping helper that can be plugged into `xmltodict`. Its purpose
-    is to aggregate and dispatch `Submapper` functions for various
-    elements in an XML document while it is parsed.
+    """Mapping helper designed to be plugged into
+    :py:meth:`xmltodict.parse`.
 
-    See `Submapper` for details about submappers.
+    The purpose of this helper class is to aggregate and dispatch
+    :py:obj:`.Submapper` functions for various elements in an
+    XML document while the document is being parsed.
 
-    The `map` method of this class is designed to be used as a value
-    for the `postprocessor` kwarg of xmltodict’s `parse` method.
+    The :py:meth:`.map` method of this class is designed to be
+    plugged into the `postprocessor` kwarg of the
+    :py:meth:`xmltodict.parse` function.
     """
 
     filter_rules: MutableSequence[Callable[..., bool]]

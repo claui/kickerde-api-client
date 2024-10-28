@@ -11,8 +11,8 @@ from . import Submapper, SubmapperKey, XmlMappingHelper
 def league_season_list_to_dict(
     xml: str,
 ) -> dict[SeasonId, Season]:
-    """Transforms an API response to a dictionary of `Season` objects,
-    indexed by season ID.
+    """Transforms an API response to a dictionary of
+    :py:class:`~.model.Season` objects, indexed by season ID.
 
     :param xml:
         a response to a `LeagueSeasonList/3/ligid/{leagueId}` query.
