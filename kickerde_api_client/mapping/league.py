@@ -23,6 +23,7 @@ def map_league_properties(
         'stateId',
         'sportId',
         'table',
+        'tblcalc',
         'trackRessortId',
     }:
         return key, int(value)
@@ -32,7 +33,6 @@ def map_league_properties(
         'hasTransfers',
         'history',
         'socialmedia',
-        'tblcalc',
         'teamOrigin',
         'tickerQuoteAd',
     }:
