@@ -5,6 +5,7 @@ import sys
 from typing import Any
 
 import datetype
+import httpx
 
 from .mapping.league_list import league_list_home_to_dict
 from .mapping.league_season_info import league_season_info_to_dict
@@ -29,11 +30,16 @@ logger = get_logger(__name__)
 class Api:
     """The primary API client and entry point for all requests."""
 
+    _provider: ResponseProvider
+
     def __init__(
         self,
+        http_client: httpx.AsyncClient | None = None,
         provider: ResponseProvider | None = None,
     ) -> None:
-        self._provider = provider or DefaultResponseProvider()
+        self._provider = provider or DefaultResponseProvider(
+            http_client=http_client
+        )
 
     async def leagues(self) -> dict[LeagueId, League]:
         """Returns all leagues and tournaments known to the system.

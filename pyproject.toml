@@ -40,7 +40,7 @@ repository = "https://github.com/claui/kickerde-api-client"
 [tool.poetry.dependencies]
 python = ">=3.12"
 datetype = "*"
-requests = "^2.32.3"
+httpx = "^0.27.2"
 xmltodict = "^0.14.2"
 
 [tool.poetry.group.dev.dependencies]
@@ -50,7 +50,6 @@ poethepoet = ">=0.24"
 pylint = ">=3.0"
 pytest = "*"
 pytest-asyncio = "*"
-types-requests = "*"
 types-xmltodict = "*"
 
 [tool.poetry.group.doc.dependencies]
