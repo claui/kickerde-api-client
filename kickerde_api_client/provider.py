@@ -23,7 +23,17 @@ class ResponseProvider(ABC):  # pylint: disable=too-few-public-methods
 
 
 class DefaultResponseProvider(ResponseProvider):  # pylint: disable=too-few-public-methods
-    """The default provider, which issues actual HTTP requests."""
+    """The default provider, which issues actual HTTP requests.
+
+    :param http_client:
+        An optional HTTP client to re-use.
+        The default value is `None`, which means that an internal
+        HTTP client will be used.
+
+    :param base_url:
+        The Kicker API endpoint to connect to.
+        The default value is the public production endpoint.
+    """
 
     # Internally re-use a single HTTP client for all object instances
     # which do not bring their own
@@ -36,16 +46,6 @@ class DefaultResponseProvider(ResponseProvider):  # pylint: disable=too-few-publ
         http_client: httpx.AsyncClient | None = None,
         base_url: str = DEFAULT_ENDPOINT_URL,
     ):
-        """
-        :param http_client:
-            An optional HTTP client to re-use.
-            The default value is `None`, which means that an internal
-            HTTP client will be used.
-
-        :param base_url:
-            The Kicker API endpoint to connect to.
-            The default value is the public production endpoint.
-        """
         self._base_url = base_url
 
         if (
