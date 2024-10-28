@@ -1,6 +1,7 @@
 """Upstream model for leagues, tournaments, and seasons."""
 
 from collections.abc import Mapping
+from enum import IntEnum
 from typing import Literal, NotRequired, TypedDict
 
 from datetype import NaiveDateTime
@@ -38,6 +39,17 @@ type SeasonId = str
 """Upstream ID for a season of a league or tournament."""
 
 
+class TableCalculatorType(IntEnum):
+    """Upstream ID to identify the type of table calculator to be
+    used for a given league."""
+
+    LEAGUE = 1
+    """League-style table calculation"""
+
+    TOURNAMENT = 2
+    """Tournament-style table calculation"""
+
+
 class League(TypedDict):
     """Upstream model for a league or tournament."""
 
@@ -66,7 +78,7 @@ class League(TypedDict):
     trackRessortId: NotRequired[TrackRessortId]
     trackRessortName: NotRequired[str]
     priority: NotRequired[int]
-    tblcalc: NotRequired[bool]
+    tblcalc: NotRequired[TableCalculatorType]
     tickerQuoteAd: NotRequired[bool]
     gamedayQuoteAd: NotRequired[bool]
     gamedayButtonTitle: NotRequired[str]
@@ -125,7 +137,7 @@ class LeagueSeason(TypedDict):
     table: NotRequired[int]
     ressortId: NotRequired[RessortId]
     ressortIdHome: NotRequired[RessortId]
-    tblcalc: NotRequired[bool]
+    tblcalc: NotRequired[TableCalculatorType]
     socialmedia: NotRequired[bool]
     syncMeinKicker: NotRequired[bool]
     goalgetters: bool

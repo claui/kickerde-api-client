@@ -7,6 +7,7 @@ from kickerde_api_client.model import (
     League,
     LeagueId,
     RessortId,
+    TableCalculatorType,
     TrackRessortId,
     SportId,
 )
@@ -39,7 +40,7 @@ def test_2_bundesliga(api: Api) -> None:
             'ressortId': RessortId.BUNDESLIGA_2,
             'trackRessortId': TrackRessortId.BUNDESLIGA_2,
             'trackRessortName': '2. Bundesliga',
-            'tblcalc': True,
+            'tblcalc': TableCalculatorType.LEAGUE,
             'tickerQuoteAd': True,
             'gamedayQuoteAd': True,
             'socialmedia': True,

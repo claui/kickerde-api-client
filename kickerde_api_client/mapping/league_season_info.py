@@ -47,13 +47,13 @@ def _map_league_properties(
         'ressortId',
         'ressortIdHome',
         'table',
+        'tblcalc',
     }:
         return key, int(value)
     if key in {
         'goalgetters',
         'socialmedia',
         'syncMeinKicker',
-        'tblcalc',
     }:
         return key, bool(int(value))
     return key, value

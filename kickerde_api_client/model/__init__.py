@@ -42,6 +42,7 @@ from .league import (
     LeagueTableId as LeagueTableId,
     Season as Season,
     SeasonId as SeasonId,
+    TableCalculatorType as TableCalculatorType,
 )
 from .league_id import LeagueId as LeagueId
 from .team import TeamId as TeamId, Team as Team
