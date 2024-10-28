@@ -34,7 +34,7 @@ classifiers = [
     "Topic :: Communications",
     "Topic :: Home Automation",
 ]
-documentation = "https://kickerde-api-client.readthedocs.io/"
+documentation = "https://kickerde-api-client.readthedocs.io/en/stable/autoapi/kickerde_api_client/"
 repository = "https://github.com/claui/kickerde-api-client"
 
 [tool.poetry.dependencies]

@@ -27,7 +27,7 @@ Direct your favorite
 
 ## Usage
 
-Browse the [documentation on Read the Docs](https://kickerde-api-client.readthedocs.io/) for details.
+Browse the [documentation on Read the Docs](https://kickerde-api-client.readthedocs.io/en/stable/autoapi/kickerde_api_client/) for details.
 
 ## Contributing to this library
 
