@@ -71,7 +71,7 @@ class Association(IntEnum):
     FVR = 11
     """Rhineland Football Association
     („Fußballverband Rheinland“), an association of football clubs
-    in the northern part of the German state Rheinland-Palatinate.
+    in the northern part of the German state Rhineland-Palatinate.
     """
 
     SAARLAND_SFV = 12

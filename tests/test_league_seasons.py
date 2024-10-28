@@ -4,6 +4,7 @@ import datetype
 import pytest
 
 from kickerde_api_client import Api
+from kickerde_api_client.model import LeagueId
 from kickerde_api_client.provider import ResponseProvider
 
 
@@ -13,8 +14,10 @@ def fixture_api(canned_response_provider: ResponseProvider) -> Api:
 
 
 def test_league_season_2_bundesliga(api: Api) -> None:
-    league_season = api.league_season(league=2, season='2024/25')
-    assert league_season['id'] == 2
+    league_season = api.league_season(
+        league=LeagueId(2), season='2024/25'
+    )
+    assert league_season['id'] == LeagueId.BUNDESLIGA_2
     assert league_season['country']['id'] == 'D'
     assert league_season['syncMeinKicker'] is False
     assert league_season['goalgetters'] is True
@@ -22,7 +25,7 @@ def test_league_season_2_bundesliga(api: Api) -> None:
 
     svd = league_season['teams'][98]
     assert svd['longName'] == 'SV Darmstadt 98'
-    assert svd['defaultLeagueId'] == 2
+    assert svd['defaultLeagueId'] == LeagueId.BUNDESLIGA_2
     assert svd['stadium']['name'] == 'Merck-Stadion am Böllenfalltor'
 
     gamedays = league_season['gamedays']
@@ -37,8 +40,10 @@ def test_league_season_2_bundesliga(api: Api) -> None:
 
 
 def test_league_season_landespokal_hessen(api: Api) -> None:
-    league_season = api.league_season(league=6081, season='2024/25')
-    assert league_season['id'] == 6081
+    league_season = api.league_season(
+        league=LeagueId(6081), season='2024/25'
+    )
+    assert league_season['id'] == LeagueId.LPHS
     assert league_season['country']['id'] == 'D'
     assert league_season['syncMeinKicker'] is False
     assert league_season['goalgetters'] is False

@@ -9,20 +9,33 @@ from .association import Association
 from .core import (
     Country,
     CountryId,
-    LeagueId,
     SportId,
     StateId,
     RessortId,
+    RessortIdHome,
+    TrackRessortId,
 )
+from .league_id import LeagueId as LeagueId
 from .team import TeamId, Team
 
 
 type ConferenceId = int
+"""Upstream ID with unknown semantics."""
+
 type DivisionId = int
+"""Upstream ID with unknown semantics."""
+
 type GamedayId = int
+"""Upstream ID for a match day within a league or tournament."""
+
 type GroupId = int
+"""Upstream ID with unknown semantics."""
+
 type LeagueTableId = int
+"""Upstream ID for a (partial or complete) league table."""
+
 type SeasonId = str
+"""Upstream ID for a season of a league or tournament."""
 
 
 class League(TypedDict):
@@ -49,8 +62,8 @@ class League(TypedDict):
     uShortName: str
     friendlyName: NotRequired[str]
     ressortId: NotRequired[RessortId]
-    ressortIdHome: NotRequired[RessortId]
-    trackRessortId: NotRequired[RessortId]
+    ressortIdHome: NotRequired[RessortIdHome]
+    trackRessortId: NotRequired[TrackRessortId]
     trackRessortName: NotRequired[str]
     priority: NotRequired[int]
     tblcalc: NotRequired[bool]

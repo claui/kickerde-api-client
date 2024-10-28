@@ -3,7 +3,7 @@
 import pytest
 
 from kickerde_api_client import Api
-from kickerde_api_client.model import Season
+from kickerde_api_client.model import LeagueId, Season
 from kickerde_api_client.provider import ResponseProvider
 
 
@@ -13,7 +13,7 @@ def fixture_api(canned_response_provider: ResponseProvider) -> Api:
 
 
 def test_seasons(api: Api) -> None:
-    seasons = api.seasons(league=2)
+    seasons = api.seasons(league=LeagueId(2))
     assert '2023/24' in seasons
     assert seasons['2023/24'] == Season(
         {

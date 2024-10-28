@@ -5,12 +5,16 @@ from typing import NotRequired, TypedDict
 
 from datetype import NaiveDateTime
 
-from .core import CountryId, LeagueId, SportId
+from .core import CountryId, SportId
 from .league import SeasonId
+from .league_id import LeagueId
 from .team import TeamId
 
 type MatchId = int
+"""Upstream ID for a sports match."""
+
 type TeamToken = str
+"""Three- to four-letter abbreviation for a match participant."""
 
 
 class MatchTeam(TypedDict):

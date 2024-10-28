@@ -3,7 +3,13 @@
 import pytest
 
 from kickerde_api_client import Api
-from kickerde_api_client.model import League
+from kickerde_api_client.model import (
+    League,
+    LeagueId,
+    RessortId,
+    TrackRessortId,
+    SportId,
+)
 from kickerde_api_client.provider import ResponseProvider
 
 
@@ -15,9 +21,9 @@ def fixture_api(canned_response_provider: ResponseProvider) -> Api:
 def test_2_bundesliga(api: Api) -> None:
     leagues = api.leagues()
     assert 2 in leagues
-    assert leagues[2] == League(
+    assert leagues[LeagueId(2)] == League(
         {
-            'id': 2,
+            'id': LeagueId.BUNDESLIGA_2,
             'shortName': '2.BL',
             'longName': '2. Bundesliga',
             'currentSeasonId': '2024/25',
@@ -26,12 +32,12 @@ def test_2_bundesliga(api: Api) -> None:
             'displayKey2': 114688,
             'table': 2,
             'countryId': 'D',
-            'sportId': 1,
+            'sportId': SportId.ASSOCIATION_FOOTBALL,
             'imId': 2,
             'urlName': '2-bundesliga',
             'uShortName': '2.BL',
-            'ressortId': 4100,
-            'trackRessortId': 4000,
+            'ressortId': RessortId.BUNDESLIGA_2,
+            'trackRessortId': TrackRessortId.BUNDESLIGA_2,
             'trackRessortName': '2. Bundesliga',
             'tblcalc': True,
             'tickerQuoteAd': True,
@@ -46,9 +52,9 @@ def test_2_bundesliga(api: Api) -> None:
 def test_friendlies(api: Api) -> None:
     leagues = api.leagues()
     assert 999 in leagues
-    assert leagues[999] == League(
+    assert leagues[LeagueId(999)] == League(
         {
-            'id': 999,
+            'id': LeagueId.FRIENDLIES,
             'shortName': 'Freundschaft',
             'longName': 'Freundschaftsspiele',
             'currentSeasonId': '2023',
@@ -57,12 +63,12 @@ def test_friendlies(api: Api) -> None:
             'displayKey2': 0,
             'table': 1,
             'countryId': 'S2',
-            'sportId': 1,
+            'sportId': SportId.ASSOCIATION_FOOTBALL,
             'imId': 999,
             'urlName': 'freundschaftsspiele',
             'uShortName': 'FREUND',
-            'ressortId': 8605,
-            'trackRessortId': 2000,
+            'ressortId': RessortId.NON_DOMESTIC_TIER_3,
+            'trackRessortId': TrackRessortId.HOME,
             'trackRessortName': 'Home',
             'goalgetters': False,
             'history': False,

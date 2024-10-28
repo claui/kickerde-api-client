@@ -8,16 +8,17 @@ from typing import Literal, NotRequired, TypedDict
 # (This promotes them from .model.api to .model)
 from .association import Association as Association
 from .core import (
-    LeagueId as LeagueId,
+    Country as Country,
+    CountryId as CountryId,
     MediaObject as MediaObject,
     ObjectId as ObjectId,
     RessortId as RessortId,
-    CountryId as CountryId,
-    Country as Country,
+    RessortIdHome as RessortIdHome,
     SportId as SportId,
     StadiumId as StadiumId,
     Stadium as Stadium,
     StateId as StateId,
+    TrackRessortId as TrackRessortId,
 )
 from .match import (
     ApprovalId as ApprovalId,
@@ -31,8 +32,8 @@ from .match import (
 from .league import (
     ConferenceId as ConferenceId,
     DivisionId as DivisionId,
-    GamedayId as GamedayId,
     Gameday as Gameday,
+    GamedayId as GamedayId,
     GroupId as GroupId,
     League as League,
     LeagueSeason as LeagueSeason,
@@ -42,6 +43,7 @@ from .league import (
     Season as Season,
     SeasonId as SeasonId,
 )
+from .league_id import LeagueId as LeagueId
 from .team import TeamId as TeamId, Team as Team
 
 
