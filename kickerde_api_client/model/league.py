@@ -1,29 +1,28 @@
-"""Python types for the upstream API."""
+"""Upstream model for leagues, tournaments, and seasons."""
 
 from collections.abc import Mapping
-from typing import Any, Literal, NotRequired, TypedDict
+from typing import Literal, NotRequired, TypedDict
 
 from datetype import NaiveDateTime
 
+from .association import Association
+from .core import (
+    Country,
+    CountryId,
+    LeagueId,
+    SportId,
+    StateId,
+    RessortId,
+)
+from .team import TeamId, Team
 
-type ApprovalId = int
-type AssociationId = int
+
 type ConferenceId = int
-type CountryId = str
 type DivisionId = int
 type GamedayId = int
 type GroupId = int
-type LeagueId = int
 type LeagueTableId = int
-type MatchId = int
-type ObjectId = int
-type RessortId = int
 type SeasonId = str
-type SportId = int
-type StadiumId = int
-type StateId = int
-type TeamId = int
-type TeamToken = str
 
 
 class League(TypedDict):
@@ -42,7 +41,7 @@ class League(TypedDict):
     table: NotRequired[int]
     stateId: NotRequired[StateId]
     countryId: CountryId
-    associationId: NotRequired[AssociationId]
+    associationId: NotRequired[Association]
     sportId: SportId
     teamOrigin: NotRequired[bool]
     imId: int
@@ -79,48 +78,6 @@ class Season(TypedDict):
     goals: NotRequired[str]
 
 
-class Country(TypedDict):
-    """Upstream model for a country."""
-
-    id: CountryId
-    shortName: str
-    longName: str
-    isoName: str
-    iconSmall: str
-
-
-class Stadium(TypedDict):
-    """Upstream model for a sports venue."""
-
-    id: StadiumId
-    name: str
-    city: str
-
-
-class Team(TypedDict):
-    """Upstream model for a sports team."""
-
-    id: TeamId
-    defaultLeagueId: LeagueId
-    shortName: str
-    longName: str
-    countryId: NotRequired[CountryId]
-    stadium: NotRequired[Stadium]
-
-
-class MatchTeam(TypedDict):
-    """Upstream model for a sports team that takes part in a match."""
-
-    id: TeamId
-    defaultLeagueId: LeagueId
-    shortName: str
-    longName: str
-    urlName: str
-    iconSmall: str
-    iconBig: str
-    token: TeamToken
-
-
 class Gameday(TypedDict):
     """Upstream model for a match day."""
 
@@ -129,59 +86,6 @@ class Gameday(TypedDict):
     dateFrom: NotRequired[NaiveDateTime]
     dateTo: NotRequired[NaiveDateTime]
     hideForTable: NotRequired[bool]
-
-
-class MatchResults(TypedDict):
-    """Upstream model for the results of a sports match."""
-
-    hergAktuell: int
-    """Current standings for the home team."""
-
-    aergAktuell: int
-    """Current standings for the away team."""
-
-    hergHz: NotRequired[int]
-    """Standings for the home team by the end of the first half."""
-
-    aergHz: NotRequired[int]
-    """Standings for the away team by the end of the first half."""
-
-    hergEnde: NotRequired[int]
-    """Standings for the home team by the end of the match."""
-
-    aergEnde: NotRequired[int]
-    """Standings for the away team by the end of the match."""
-
-
-class Match(TypedDict):
-    """Upstream model for a sports match."""
-
-    id: MatchId
-    leagueId: LeagueId
-    leagueShortName: str
-    leagueLongName: str
-    seasonId: SeasonId
-    roundId: int
-    homeTeam: MatchTeam
-    guestTeam: MatchTeam
-    results: NotRequired[MatchResults]
-    date: NaiveDateTime
-    completed: bool
-    currentMinute: int
-    currentPeriod: int
-    approvalId: ApprovalId
-    approvalName: str
-    timeConfirmed: bool
-    sportId: SportId
-    displayKey: int
-    round: str
-    leaguePriority: int
-    countryId: CountryId
-    country: str
-    leagueUrlName: str
-    state: str
-    modifiedAt: NaiveDateTime
-    currentDateTime: NaiveDateTime
 
 
 class LeagueSeason(TypedDict):
@@ -212,10 +116,6 @@ class LeagueSeason(TypedDict):
     socialmedia: NotRequired[bool]
     syncMeinKicker: NotRequired[bool]
     goalgetters: bool
-
-
-type MediaObject = Any
-"""Upstream abstraction for a document, slideshow, or video."""
 
 
 class LeagueTableEntry(TypedDict):
@@ -275,29 +175,3 @@ class LeagueTable(TypedDict):
     See :py:attr:`.LeagueTableEntry.rank` for details on why this
     dictionary is indexed by team rather than by rank.
     """
-
-
-class MyTeamSync(TypedDict):
-    """Upstream model for live or upcoming matches played by a
-    given team.
-    """
-
-    id: TeamId
-    countryId: NotRequired[CountryId]
-    defaultLeagueId: LeagueId
-    shortName: str
-    longName: str
-
-    matches: Mapping[MatchId, Match]
-    """Matches played by this team, indexed by match ID."""
-
-    objects: Mapping[
-        Literal['documents', 'slideshows ', 'videos'],
-        Mapping[ObjectId, MediaObject],
-    ]
-    table: LeagueTable
-    league: League
-    iconSmall: str
-    iconBig: str
-    changeMeinKicker: NotRequired[bool]
-    syncMeinKicker: NotRequired[bool]

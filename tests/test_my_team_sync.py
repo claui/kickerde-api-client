@@ -4,7 +4,7 @@ import datetype
 import pytest
 
 from kickerde_api_client import Api
-from kickerde_api_client.model import MatchResults
+from kickerde_api_client.model import ApprovalId, MatchResults, Period
 from kickerde_api_client.provider import ResponseProvider
 
 
@@ -28,8 +28,8 @@ def test_lecce(api: Api) -> None:
     assert match['completed'] is False
     assert match['timeConfirmed'] is True
     assert match['currentMinute'] == 83
-    assert match['currentPeriod'] == 3
-    assert match['approvalId'] == 12
+    assert match['currentPeriod'] == Period.SECOND_HALF
+    assert match['approvalId'] == ApprovalId.LIVE
     assert match['approvalName'] == 'Live'
     assert match['leaguePriority'] == 1
     assert match['modifiedAt'] == datetype.fromisoformat(
@@ -110,7 +110,7 @@ def test_barca(api: Api) -> None:
     assert match['roundId'] == 11
     assert match['leagueLongName'] == 'La Liga'
     assert match['completed'] is False
-    assert match['currentPeriod'] == 3
+    assert match['currentPeriod'] == Period.SECOND_HALF
     assert match['modifiedAt'] == datetype.fromisoformat(
         '2024-10-26T22:17:43'
     )
