@@ -21,7 +21,7 @@ warn_unused_ignores = true
 
 [tool.poetry]
 name = "kickerde_api_client"
-version = "0.1.0"
+version = "0.1.1"
 description = "Unofficial Python bindings for the public kicker.de news API"
 readme = ["README.md"]
 authors = ["Claudia Pellegrino <clau@tiqua.de>"]
