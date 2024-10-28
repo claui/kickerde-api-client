@@ -49,6 +49,7 @@ mypy = ">=1.8"
 poethepoet = ">=0.24"
 pylint = ">=3.0"
 pytest = "*"
+pytest-asyncio = "*"
 types-requests = "*"
 types-xmltodict = "*"
 
@@ -76,6 +77,8 @@ typecheck.help = "Run static type checker"
 reportUnsupportedDunderAll = "none"
 
 [tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "package"
+asyncio_mode = "auto"
 testpaths = "tests"
 xfail_strict = true
 

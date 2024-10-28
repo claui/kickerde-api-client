@@ -11,7 +11,7 @@ class ResponseProvider(ABC):  # pylint: disable=too-few-public-methods
     """Abstract HTTP response provider for testability."""
 
     @abstractmethod
-    def get(self, path: str) -> str:
+    async def get(self, path: str) -> str:
         """Returns an HTTP response as a string.
 
         :param path:
@@ -33,7 +33,7 @@ class DefaultResponseProvider(ResponseProvider):  # pylint: disable=too-few-publ
         """
         self._base_url = base_url
 
-    def get(self, path: str) -> str:
+    async def get(self, path: str) -> str:
         response = requests.get(
             f'{self._base_url}/{path}',
             timeout=REQUEST_TIMEOUT_SEC,

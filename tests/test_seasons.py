@@ -12,8 +12,8 @@ def fixture_api(canned_response_provider: ResponseProvider) -> Api:
     return Api(provider=canned_response_provider)
 
 
-def test_seasons(api: Api) -> None:
-    seasons = api.seasons(league=LeagueId(2))
+async def test_seasons(api: Api) -> None:
+    seasons = await api.seasons(league=LeagueId(2))
     assert '2023/24' in seasons
     assert seasons['2023/24'] == Season(
         {

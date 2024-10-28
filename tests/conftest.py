@@ -56,7 +56,7 @@ def _match_team_id(
 class CannedResponseProvider(ResponseProvider):
     """Fake response provider that uses only canned responses."""
 
-    def get(self, path: str) -> str:
+    async def get(self, path: str) -> str:
         return _load_canned_response(
             CannedResponseProvider._path_to_xml_file(path)
         )
