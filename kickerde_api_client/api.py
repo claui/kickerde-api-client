@@ -39,7 +39,8 @@ class Api:
         """Returns all leagues and tournaments known to the system.
 
         :return:
-            a dictionary of `League` objects, indexed by league ID.
+            a dictionary of :py:class:`~.model.League` objects, indexed
+            by league ID.
         """
         return league_list_home_to_dict(
             self._provider.get('LeagueListHome/3'),
@@ -52,10 +53,11 @@ class Api:
 
         :param league:
             the ID of the league or tournament.
-            Alternatively, a `League` object.
+            Alternatively, a :py:class:`~.model.League` object.
 
         :return:
-            a dictionary of `Season` objects, indexed by season ID.
+            a dictionary of :py:class:`~.model.Season` objects, indexed
+            by season ID.
         """
         league_id = league['id'] if isinstance(league, dict) else league
         return league_season_list_to_dict(
@@ -74,13 +76,13 @@ class Api:
 
         :param league:
             the ID of the league or tournament.
-            Alternatively, a `League` object.
+            Alternatively, a :py:class:`~.model.League` object.
 
         :param season:
             the ID of the season.
-            Alternatively, a `Season` object.
+            Alternatively, a :py:class:`~.model.Season` object.
 
-        :return: a `LeagueSeason` object.
+        :return: a :py:class:`~.model.LeagueSeason` object.
         """
         league_id = league['id'] if isinstance(league, dict) else league
         season_id = season['id'] if isinstance(season, dict) else season
@@ -96,9 +98,9 @@ class Api:
 
         :param team:
             the ID of the team.
-            Alternatively, a `Team` object.
+            Alternatively, a :py:class:`~.model.Team` object.
 
-        :return: a `MyTeamSync` object.
+        :return: a :py:class:`~.model.MyTeamSync` object.
         """
         team_id = team['id'] if isinstance(team, dict) else team
         return my_team_sync_to_dict(
@@ -116,7 +118,7 @@ class Api:
 
         :param league:
             the ID of the league or tournament.
-            Alternatively, a `League` object.
+            Alternatively, a :py:class:`~.model.League` object.
         """
         json.dump(
             self.seasons(league=league),
@@ -130,15 +132,16 @@ class Api:
         league: League | LeagueId,
         season: Season | SeasonId,
     ) -> None:
-        """Dumps a `LeagueSeason` object to stdout in JSON format.
+        """Dumps a :py:class:`~.model.LeagueSeason` object to stdout
+        in JSON format.
 
         :param league:
             the ID of the league or tournament.
-            Alternatively, a `League` object.
+            Alternatively, a :py:class:`~.model.League` object.
 
         :param season:
             the ID of the season.
-            Alternatively, a `Season` object.
+            Alternatively, a :py:class:`~.model.Season` object.
         """
         json.dump(
             self.league_season(league=league, season=season),
@@ -149,11 +152,12 @@ class Api:
         )
 
     def dump_my_team_sync(self, team: Team | TeamId) -> None:
-        """Dumps a `MyTeamSync` object to stdout in JSON format.
+        """Dumps a :py:class:`~.model.MyTeamSync` object to stdout in
+        JSON format.
 
         :param team:
             the ID of the team.
-            Alternatively, a `Team` object.
+            Alternatively, a :py:class:`~.model.Team` object.
         """
         json.dump(
             self.my_team_sync(team=team),

@@ -1,4 +1,6 @@
-"""Mapping and transformation logic for `LeagueSeason` objects."""
+"""Mapping and transformation logic for :py:class:`~.model.LeagueSeason`
+objects.
+"""
 
 from typing import Any, cast
 
@@ -20,7 +22,8 @@ from .team import map_team_properties
 
 
 def my_team_sync_to_dict(xml: str) -> MyTeamSync:
-    """Transforms an API response to a `MyTeamSync` object.
+    """Transforms an API response to a :py:class:`~.model.MyTeamSync`
+    object.
 
     :param xml:
         a response to a `MyTeamSync/3/vrnid/{teamId}` query.

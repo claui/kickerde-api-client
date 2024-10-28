@@ -1,4 +1,4 @@
-"""Mapping logic for `Team` (or team-ish) objects."""
+"""Mapping logic for :py:class:`~.model.Team` (or team-ish) objects."""
 
 from typing import Any
 

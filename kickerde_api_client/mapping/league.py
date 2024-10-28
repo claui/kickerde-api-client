@@ -6,7 +6,9 @@ from typing import Any
 def map_league_properties(
     key: str, value: Any
 ) -> tuple[str, str | int | bool]:
-    """Mapping rules for the individual properties of a `League`."""
+    """Mapping rules for the individual properties of a
+    :py:class:`~.model.League`.
+    """
 
     if key in {
         'associationId',

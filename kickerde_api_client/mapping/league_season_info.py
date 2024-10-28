@@ -1,4 +1,6 @@
-"""Mapping and transformation logic for `LeagueSeason` objects."""
+"""Mapping and transformation logic for :py:class:`~.model.LeagueSeason`
+objects.
+"""
 
 from typing import Any, cast
 
@@ -11,7 +13,8 @@ from .team import map_team_properties
 
 
 def league_season_info_to_dict(xml: str) -> LeagueSeason:
-    """Transforms an API response to a `LeagueSeason` object.
+    """Transforms an API response to a :py:class:`~.model.LeagueSeason`
+    object.
 
     :param xml:
         a response to a `LeagueSeasonInfo/3/ligid/{leagueId}/saison/{season}` query.
