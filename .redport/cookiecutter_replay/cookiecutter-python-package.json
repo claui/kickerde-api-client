@@ -3,7 +3,6 @@
     "project_title": "API client for kicker.de",
     "pypi_package_name": "kickerde-api-client",
     "python_package_name": "kickerde_api_client",
-    "project_slug": "kickerde_api_client",
     "project_description": "Unofficial Python bindings for the public kicker.de news API",
     "first_module_name": "api",
     "project_version": "0.1.0",
