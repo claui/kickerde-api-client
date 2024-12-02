@@ -53,6 +53,7 @@ pytest-asyncio = "*"
 types-xmltodict = "*"
 
 [tool.poetry.group.doc.dependencies]
+myst-parser = ">=2.0.0"
 sphinx = ">=7.1.2,<7.2.0"
 sphinx-autoapi = ">=3.3"
 sphinx-rtd-theme = ">=3.0"

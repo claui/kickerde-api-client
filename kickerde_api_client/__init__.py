@@ -1,12 +1,4 @@
 """
-Unofficial client for the public kicker.de news API
-
-To install this library from PyPI, open a shell and run:
-
-.. code:: shell
-
-   pip install kickerde-api-client
-
 Demo code to get started:
 
 .. code:: python

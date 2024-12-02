@@ -5,3 +5,6 @@ Documentation for the unofficial kicker.de API client
    :maxdepth: 2
 
    autoapi/index
+
+.. include:: ../../README.md
+   :parser: myst_parser.sphinx_
