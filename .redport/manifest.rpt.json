@@ -5,7 +5,7 @@
     "commit": "d311a142e69e531f27fdada32871d43f765a8f25",
     "replay": "cookiecutter_replay/cookiecutter-python-package.json",
     "patches": [
-      "patches/disable-install-step.patch"
+      "patches/disable-install-step.before.a4b5b32.patch"
     ],
     "nextPatches": [
       "patches/disable-install-step.patch"
