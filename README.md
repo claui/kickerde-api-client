@@ -27,7 +27,7 @@ Direct your favorite
 
 ## Usage
 
-Browse the [documentation on Read the Docs](https://kickerde-api-client.readthedocs.io/en/stable/autoapi/kickerde_api_client/) for details.
+Browse the [API reference on Read the Docs](https://kickerde-api-client.readthedocs.io/en/stable/autoapi/kickerde_api_client/) for details.
 
 ## Contributing to this library
 
@@ -39,4 +39,4 @@ Copyright (c) 2024 Claudia Pellegrino
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-For a copy of the License, see [LICENSE](LICENSE).
+For a copy of the License, see [LICENSE](https://raw.githubusercontent.com/claui/kickerde-api-client/refs/heads/main/LICENSE).

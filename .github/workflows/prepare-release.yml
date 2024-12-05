@@ -98,7 +98,7 @@ jobs:
     runs-on: ubuntu-22.04
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/kickerde_api_client
+      url: https://test.pypi.org/p/kickerde-api-client
     permissions:
       id-token: write
     steps:

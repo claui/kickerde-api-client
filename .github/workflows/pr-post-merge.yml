@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-22.04
     environment:
       name: pypi
-      url: https://pypi.org/p/kickerde_api_client
+      url: https://pypi.org/p/kickerde-api-client
     permissions:
       contents: write
       id-token: write

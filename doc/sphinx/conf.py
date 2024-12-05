@@ -10,7 +10,7 @@
 # type: ignore
 
 project = 'API client for kicker.de'
-executable_name = 'kickerde-api-client'
+executable = 'kickerde-api-client'
 author = 'Claudia Pellegrino <clau@tiqua.de>'
 description = (
     'Unofficial Python bindings for the public kicker.de news API'
@@ -21,6 +21,8 @@ description = (
 
 extensions = [
     'autoapi.extension',
+    'myst_parser',
+    'sphinx.ext.autodoc',
 ]
 
 autoapi_dirs = ['../../kickerde_api_client']
@@ -37,6 +39,10 @@ autoapi_type = 'python'
 autodoc_typehints = 'description'
 
 html_theme = 'sphinx_rtd_theme'
+
+myst_enable_extensions = [
+    'deflist',
+]
 
 
 def skip_module(app, what, name, obj, skip, options):
