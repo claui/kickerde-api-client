@@ -162,8 +162,11 @@ To generate project documentation, run:
 poetry run poe doc
 ```
 
-To open the generated documentation, point your browser to the
-`build/html` directory.
+To open the generated HTML documentation in your browser, run:
+
+```shell
+poetry run poe html
+```
 
 ## Maintenance
 
