@@ -18,6 +18,22 @@
       }
     },
     {
+      "label": "API client for kicker.de: Browse HTML documentation",
+      "type": "process",
+      "command": "poetry",
+      "args": [
+        "run",
+        "poe",
+        "html"
+      ],
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "clear": true,
+        "showReuseMessage": false
+      }
+    },
+    {
       "label": "API client for kicker.de: Run static type checker",
       "type": "process",
       "command": "poetry",
