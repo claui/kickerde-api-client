@@ -156,7 +156,7 @@ act
 
 ### Generating project documentation
 
-To generate project documentation, run:
+To generate project documentation (HTML and man page), run:
 
 ```shell
 poetry run poe doc

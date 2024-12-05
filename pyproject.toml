@@ -64,7 +64,11 @@ verbosity = -1
 [tool.poe.tasks]
 tasks.cmd = "poe -v"
 tasks.help = "List available tasks"
-doc.cmd = "sphinx-build -aqEW -b html doc/sphinx build/html"
+doc.shell = """
+    set -ex
+    rm -rf build/html
+    sphinx-build -aqEW -b html doc/sphinx build/html
+"""
 doc.help = "Generate documentation"
 html.script = "webbrowser:open('build/html/index.html')"
 html.help = "Browse HTML documentation"

@@ -1,4 +1,4 @@
-"""Customized logging with color support."""
+"""Customized logging."""
 
 import logging as python_logging
 
@@ -6,7 +6,7 @@ from .settings import debugMode
 
 
 def get_logger(name: str) -> python_logging.Logger:
-    """Instantiate a custom logger with color support."""
+    """Instantiate a custom logger."""
     logger = python_logging.getLogger(name)
     logger.setLevel(
         python_logging.DEBUG if debugMode else python_logging.INFO
