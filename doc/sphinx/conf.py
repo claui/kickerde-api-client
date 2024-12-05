@@ -10,7 +10,7 @@
 # type: ignore
 
 project = 'API client for kicker.de'
-executable_name = 'kickerde-api-client'
+executable = 'kickerde-api-client'
 author = 'Claudia Pellegrino <clau@tiqua.de>'
 description = (
     'Unofficial Python bindings for the public kicker.de news API'
