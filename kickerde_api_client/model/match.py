@@ -97,16 +97,51 @@ class Match(TypedDict):
 
     id: MatchId
     leagueId: LeagueId
+
     leagueShortName: str
+    """German-language editorial shorthand for the league or tournament.
+
+    Equivalent to the :py:attr:`~.model.League.shortName` of a :py:class:`~.model.League`.
+
+    Example: `2.BL` for `2. Bundesliga`
+    """
+
     leagueLongName: str
+    """German-language full-name of the league or tournament.
+
+    Equivalent to the :py:attr:`~.model.League.longName` of a :py:class:`~.model.League`.
+    """
+
     seasonId: SeasonId
+
     roundId: int
+    """Ordinal of the round, 1-based.
+
+    Correlates to :py:attr:`.round`, e.g. `roundId` is `18`
+    if `round` is equal to `“18. Spieltag”`.
+    """
+
     homeTeam: MatchTeam
     guestTeam: MatchTeam
     results: NotRequired[MatchResults]
+
     date: NaiveDateTime
+    """Date and time for which the match is scheduled to begin.
+
+    Implies a timezone of `Europe/Berlin`.
+    """
+
     completed: bool
+    """`True` if the match is over, `False` otherwise."""
+
     currentMinute: int
+    """How many minutes of the match have passed.
+    Includes minutes that have started but not completed.
+
+    Typically equal to 0 if the match has not started.
+
+    Equal to the duration of the match in minutes if the match is over.
+    """
 
     currentPeriod: Period
     """The phase into which the match has progressed."""
@@ -115,16 +150,60 @@ class Match(TypedDict):
     """Degree of certainty with which this match is scheduled."""
 
     approvalName: str
-    """German-language description of the degree of certainty."""
+    """German-language description of the degree of certainty.
+    Correlates with :py:attr:`.approvalId`.
+
+    Examples:
+
+    - `Angesetzt`
+    - `Vorschau`
+    - `Live`
+    """
 
     timeConfirmed: bool
+    """Whether the association has confirmed the date and time."""
+
     sportId: SportId
+    """Upstream ID for the type of sport."""
+
     displayKey: int
+    """Sorting key for editorial purposes."""
+
     round: str
+    """German-language display name of the round or match day.
+
+    Example: `18. Spieltag`
+    """
+
     leaguePriority: int
+    """Editorial priority of the league that hosts the match.
+
+    Equivalent to the :py:attr:`~.model.League.priority` of a :py:class:`~.model.League`.
+    """
+
     countryId: CountryId
+    """Upstream ID for a country that hosts the match."""
+
     country: str
+    """German-language name of the country hosting the match.
+
+    Correlates with :py:attr:`.countryId`.
+    """
+
     leagueUrlName: str
+    """URL-friendly league name. Example: ``serie-a`` for `Serie A`."""
+
     state: str
+    """German-language description of a purpose, status, or rationale.
+
+    Example: `Regulär`
+    """
+
     modifiedAt: NaiveDateTime
+    """Server-side timestamp. Implies a timezone of `Europe/Berlin`."""
+
     currentDateTime: NaiveDateTime
+    """Server-side timestamp of when this library has retrieved the data.
+
+    Implies a timezone of `Europe/Berlin`.
+    """
