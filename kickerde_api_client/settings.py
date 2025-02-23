@@ -7,6 +7,8 @@ PROJECT_ROOT = Path(__file__).parent.parent.absolute()
 PACKAGE_ROOT = Path(__file__).parent.absolute()
 PYPROJECT_TOML = PROJECT_ROOT / 'pyproject.toml'
 
+PACKAGE_NAME = 'kickerde-api-client'
+
 DEFAULT_ENDPOINT_URL = (
     'https://ovsyndication.kicker.de/API/universal/3.0'
 )
