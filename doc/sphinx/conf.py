@@ -44,12 +44,14 @@ myst_enable_extensions = [
     'deflist',
 ]
 
+
 def skip_module(app, what, name, obj, skip, options):
     if what != 'module':
         return skip
     if name in [
-        'kickerde_api_client.version',
+        'kickerde_api_client.config',
         'kickerde_api_client.settings',
+        'kickerde_api_client.version',
     ]:
         return True
     return skip
@@ -61,6 +63,7 @@ def setup(sphinx):
 
 templates_path = []
 exclude_patterns = [
-    '**/kickerde_api_client/version/**',
+    '**/kickerde_api_client/config/**',
     '**/kickerde_api_client/settings/**',
+    '**/kickerde_api_client/version/**',
 ]
