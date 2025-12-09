@@ -3,6 +3,7 @@
 import json
 import sys
 from typing import Any
+from urllib.parse import quote_plus as q
 
 import datetype
 import httpx
@@ -96,7 +97,7 @@ class Api:
         season_id = season['id'] if isinstance(season, dict) else season
         return league_season_info_to_dict(
             await self._provider.get(
-                f'LeagueSeasonInfo/3/ligid/{league_id}/saison/{season_id}'
+                f'LeagueSeasonInfo/3/ligid/{league_id}/saison/{q(season_id)}'
             ),
         )
 
