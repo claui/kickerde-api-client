@@ -2,7 +2,6 @@
 
 import re
 from typing import NamedTuple
-from urllib.parse import unquote_plus
 
 import pytest
 
@@ -43,9 +42,7 @@ def _match_league_season_id(
     if match := re.fullmatch(pattern, path):
         return _LeagueSeasonUrlMatch(
             league_id=match.group('league_id'),
-            season_id=unquote_plus(match.group('season_id')).replace(
-                '/', '-'
-            ),
+            season_id=match.group('season_id'),
         )
     return None
 
